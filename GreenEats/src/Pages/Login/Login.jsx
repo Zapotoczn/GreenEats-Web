@@ -1,25 +1,20 @@
-import { Container } from "./styles"
-import { ButtonText } from "./../../Components/Button/ButtonText"
+import { LoginCard } from "./styles";
+import { MainLogin } from "./styles";
+import { ImgFood } from "./styles";
+import { ButtonText } from "./../../Components/Button/ButtonText";
 
 export function Login() {
   return (
-    <Container>
-      <header>
-
-      </header>
-
-      <main id="content">
-        <h1>Receba Suas compras em casa</h1>
-        <p>O melhor aplicativo de entrega da 
-        cidade para entregar seus 
-        mantimentos frescos diarios</p>
-         <ButtonText title="Login"/>
-         <ButtonText title="Cadastro"/>
-      </main>
-
-      <footer>
-
-      </footer>
-    </Container>
-  )
+    <MainLogin>
+      <LoginCard>
+        <h1>Receba suas compras em casa</h1>
+        <p>O melhor aplicativo de entrega da </p>
+        <p>cidade para entregar seus </p>
+        <p>mantimentos frescos diarios</p>
+        <ButtonText title="Login" />
+        <ButtonText title="Cadastro" />
+        <ImgFood src="https://sophiederam.com/wp-content/uploads/2022/05/comida-saudavel-e-barata.jpg" />
+      </LoginCard>
+    </MainLogin>
+  );
 }
