@@ -10,12 +10,10 @@ export const Container = styled.button`
   cursor: pointer;
 
   height: 2.5rem;
-  position: relative;
   top: 30px;
   width: 10rem;
   border: 0;
   padding: 0 16px;
-  margin-top: 16px;
   border-radius: 20px;
   font-weight: 500;
 
