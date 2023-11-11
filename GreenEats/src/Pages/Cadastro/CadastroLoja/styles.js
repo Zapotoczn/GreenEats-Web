@@ -21,23 +21,38 @@ export const LoginCadastro = styled.div`
 
   > h1 {
     position: relative;
-    bottom: 20%;
+    bottom: 15%;
   }
 
   > p {
     margin: 0;
     color: #979899;
     position: relative;
-    bottom: 19%;
+    bottom: 15%;
   }
 `;
 
-export const NomeCompleto = styled.div`
+export const Inputs = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-  bottom: 80px;
+  bottom: 8%;
+  padding: 20px;
   width: 500px;
+
+  .error-message {
+    color: rgb(255, 72, 72);
+    font-size: 0.75rem;
+    margin-top: 8px;
+  }
+
+  .input-error {
+    outline: 1px solid rgb(255, 72, 72);
+  }
+
+  .input::placeholder {
+    color: #999;
+  }
 
   > label {
     font-weight: 500;
@@ -49,53 +64,6 @@ export const NomeCompleto = styled.div`
     border: none;
     border-radius: 5px;
     outline: none;
-    color: #eee;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    outline: 1px solid 444;
-  }
-`;
-
-export const Email = styled.div`
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  bottom: 25px;
-  width: 500px;
-
-  > label {
-    font-weight: 500;
-    padding: 12px;
-  }
-
-  > input {
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    outline: none;
-    color: #eee;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    outline: 1px solid 444;
-  }
-`;
-
-export const Cnpj = styled.div`
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  top: 25px;
-  width: 500px;
-
-  > label {
-    font-weight: 500;
-    padding: 12px;
-  }
-
-  > input {
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    outline: none;
-    color: #eee;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     outline: 1px solid 444;
   }
