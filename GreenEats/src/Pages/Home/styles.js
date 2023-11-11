@@ -1,14 +1,64 @@
 import styled from "styled-components"
 
-export const Container = styled.div`
+export const tudo = styled.div`
+  *{
+display: flex;
+flex-direction: column;
+}
+`
 
-  
-  body {
+
+
+export const Container = styled.div`
+  header {
     margin: -8px;
     box-sizing: border-box;
     width: 100vw;
-    height: 100vh;
     background-color: white;
+    display: block;
 
   }
+
+  body {
+    margin: -8px;
+    height: 100vh;
+    width: 100%;
+  }
   `
+
+export const Topo = styled.div`
+display: flex;
+flex-direction: column;
+gap: 20px;
+width: 60%;
+height: 40vh;
+margin-left: 20%;
+margin-top: 60px;
+
+`
+
+export const ImagemTop = styled.div`
+width: 100%;
+
+ img{
+  
+    width: 100%; /* width of container */
+    height: 300px; /* height of container */
+    object-fit: cover;/* try 20% 10% */ 
+    border-radius: 10px;
+ 
+  }
+`
+
+export const ButtonsTop = styled.div`
+height: 50px;
+width: 100%;
+display: flex;
+flex-direction: row;
+gap: 30px;
+align-items:  flex-start;
+
+
+
+
+`
