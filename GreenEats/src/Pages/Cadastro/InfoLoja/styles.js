@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
-export const MainLogin = styled.div`
+export const MainCadastro = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 
-export const LoginCard = styled.div`
+export const LoginCadastro = styled.div`
   width: 70vh;
   height: 95vh;
   display: flex;
@@ -17,41 +17,33 @@ export const LoginCard = styled.div`
   background: white;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
   border-radius: 20px;
+  background-color: #ebf8ee;
 
   > h1 {
     position: relative;
-    bottom: 5%;
+    bottom: 7%;
   }
 
   > p {
     margin: 0;
     color: #979899;
     position: relative;
-    bottom: 35px;
+    bottom: 7%;
   }
-`;
-
-export const ImgFood = styled.img`
-  max-width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  top: 30px;
 `;
 
 export const Inputs = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-  bottom: 6%;
-  padding: 15px;
+  bottom: 5%;
+  padding: 20px;
   width: 500px;
 
   .error-message {
     color: rgb(255, 72, 72);
     font-size: 0.75rem;
-    margin: 0;
+    margin-top: 3px;
   }
 
   .input-error {
@@ -62,6 +54,11 @@ export const Inputs = styled.div`
     color: #999;
   }
 
+  > label {
+    font-weight: 500;
+    padding: 12px;
+  }
+
   > input {
     padding: 12px;
     border: none;
@@ -69,10 +66,5 @@ export const Inputs = styled.div`
     outline: none;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     outline: 1px solid 444;
-  }
-
-  > span {
-    position: relative;
-    left: 70%;
   }
 `;
