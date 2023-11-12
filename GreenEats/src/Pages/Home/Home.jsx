@@ -4,6 +4,7 @@ import {ButtonsTop} from "./styles";
 import {Topo} from "./styles";
 import Header from './../../Components/Header/index'
 import { ButtonText } from "./../../Components/Button/ButtonText";
+import { Cardh } from "./../../Components/Card/Card";
 
 export function Home() {
   return (
@@ -29,8 +30,10 @@ export function Home() {
 
 
         <div>
-        sim
+          <Cardh Alimento="Morango" Tipo="Morango" Valor="R$ 50,00" />
         </div>
+
+
       </body>
     </Container>
   );
