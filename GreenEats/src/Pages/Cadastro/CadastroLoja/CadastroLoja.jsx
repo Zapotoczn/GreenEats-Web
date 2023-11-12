@@ -1,11 +1,9 @@
 import { useForm } from "react-hook-form";
-// import { isEmail } from "validator";
+import InputMask from "react-input-mask";
 import { LoginCadastro } from "./styles";
 import { MainCadastro } from "./styles";
 import { ButtonCadastro } from "./Components/Button/ButtonCadastro";
-import { NomeCompleto } from "./styles";
-import { Email } from "./styles";
-import { Cnpj } from "./styles";
+import { Inputs } from "./styles";
 
 export const CadastroLoja = () => {
   const {
@@ -16,7 +14,7 @@ export const CadastroLoja = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-    // alert(JSON.stringify(data));
+    // console.log(JSON.stringify(data));
   };
 
   return (
@@ -24,22 +22,25 @@ export const CadastroLoja = () => {
       <LoginCadastro>
         <h1>Cadastre sua loja</h1>
         <p>Entre e ganhe mensalidade grátis</p>
-        <NomeCompleto>
-          <label>Nome</label>
+        <Inputs>
+          <label>Nome completo</label>
           <input
             className={errors?.name && "input-error"}
             type="text"
-            placeholder="Seu nome"
+            placeholder="Guilherme silva"
             {...register("name", { required: true })}
           />
-        </NomeCompleto>
+          {errors?.name?.type === "required" && (
+            <p className="error-message">Nome Obrigatorio.</p>
+          )}
+        </Inputs>
 
-        <Email>
+        <Inputs>
           <label>E-mail</label>
           <input
             className={errors?.email && "input-error"}
             type="email"
-            placeholder="Seu email"
+            placeholder="email@email.com"
             {...register("email", {
               required: true,
               // validate: (value) => isEmail(value),
@@ -52,17 +53,29 @@ export const CadastroLoja = () => {
           {errors?.email?.type === "validate" && (
             <p className="error-message">Email invalido.</p>
           )}
-        </Email>
+        </Inputs>
 
-        <Cnpj>
-          <label>Cnpj</label>
-          <input
-            className={errors?.name && "input-error"}
+        <Inputs>
+          <label htmlFor="cnpjInput">CNPJ:</label>
+          <InputMask
+            className={errors?.cnpj && "input-error"}
+            mask="99.999.999/9999-99"
+            placeholder="00.000.000/0000-00"
+            maskChar=""
             type="text"
-            placeholder="Seu cnpj"
-            {...register("Cnpj", { required: true })}
+            id="cnpjInput"
+            {...register("cnpj", {
+              required: true,
+            })}
           />
-        </Cnpj>
+          {errors?.cnpj?.type === "required" && (
+            <p className="error-message">Cnpj obrigatório.</p>
+          )}
+
+          {errors?.cnpj?.type === "validate" && (
+            <p className="error-message">Cnpj invalido.</p>
+          )}
+        </Inputs>
         <ButtonCadastro
           onClick={() => handleSubmit(onSubmit)()}
           title="Continuar"
@@ -71,5 +84,3 @@ export const CadastroLoja = () => {
     </MainCadastro>
   );
 };
-
-// export default CadastroLoja;
