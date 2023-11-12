@@ -37,42 +37,5 @@ export const ImgFood = styled.img`
   justify-content: center;
   align-items: center;
   position: relative;
-  top: 30px;
-`;
-
-export const Inputs = styled.div`
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  bottom: 6%;
-  padding: 15px;
-  width: 500px;
-
-  .error-message {
-    color: rgb(255, 72, 72);
-    font-size: 0.75rem;
-    margin: 0;
-  }
-
-  .input-error {
-    outline: 1px solid rgb(255, 72, 72);
-  }
-
-  .input::placeholder {
-    color: #999;
-  }
-
-  > input {
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    outline: none;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    outline: 1px solid 444;
-  }
-
-  > span {
-    position: relative;
-    left: 70%;
-  }
+  top: 101px;
 `;

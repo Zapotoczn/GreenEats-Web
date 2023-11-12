@@ -2,10 +2,10 @@ import { useForm } from "react-hook-form";
 import InputMask from "react-input-mask";
 import { LoginCadastro } from "./styles";
 import { MainCadastro } from "./styles";
-import { ButtonCadastro } from "./Components/Button/ButtonCadastro";
+import { ButtonCadastro } from "./../CadastroLoja/Components/Button/ButtonCadastro";
 import { Inputs } from "./styles";
 
-export const CadastroLoja = () => {
+export const Entregador = () => {
   const {
     register,
     handleSubmit,
@@ -20,8 +20,8 @@ export const CadastroLoja = () => {
   return (
     <MainCadastro>
       <LoginCadastro>
-        <h1>Cadastre sua loja</h1>
-        <p>Entre e ganhe mensalidade grátis</p>
+        <h1>Bem vindo! Entregador</h1>
+        <p>Digite seus dados pessoais</p>
         <Inputs>
           <label>Nome completo</label>
           <input
@@ -56,24 +56,24 @@ export const CadastroLoja = () => {
         </Inputs>
 
         <Inputs>
-          <label htmlFor="cnpjInput">CNPJ:</label>
+          <label htmlFor="cpfInput">CPF:</label>
           <InputMask
-            className={errors?.cnpj && "input-error"}
-            mask="99.999.999/9999-99"
-            placeholder="00.000.000/0000-00"
+            className={errors?.cpf && "input-error"}
+            mask="999.999.999-99"
+            placeholder="000.000.000-00"
             maskChar=""
             type="text"
-            id="cnpjInput"
-            {...register("cnpj", {
+            id="cpfInput"
+            {...register("cpf", {
               required: true,
             })}
           />
-          {errors?.cnpj?.type === "required" && (
-            <p className="error-message">Cnpj obrigatório.</p>
+          {errors?.cpf?.type === "required" && (
+            <p className="error-message">Cpf obrigatório.</p>
           )}
 
-          {errors?.cnpj?.type === "validate" && (
-            <p className="error-message">Cnpj invalido.</p>
+          {errors?.cpf?.type === "validate" && (
+            <p className="error-message">Cpf invalido.</p>
           )}
         </Inputs>
 
