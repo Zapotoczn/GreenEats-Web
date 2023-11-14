@@ -1,13 +1,5 @@
 import styled from "styled-components"
 
-export const tudo = styled.div`
-  *{
-display: flex;
-flex-direction: column;
-}
-`
-
-
 
 export const Container = styled.div`
   header {
@@ -57,8 +49,28 @@ display: flex;
 flex-direction: row;
 gap: 30px;
 align-items:  flex-start;
+`
+
+export const Sections = styled.div`
+h3{
+  padding-left: 20%;
+  padding-top: 50px;
+  font-size: 30px;
+  margin-bottom: 0px;
+}
+width: 100%;
+`
 
 
+export const CardSection = styled.div`
 
-
+height: 60%;
+padding-left: 20%;
+padding-right: 15%;
+padding-top: 30px;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: flex-start;
+gap: 20px;
 `

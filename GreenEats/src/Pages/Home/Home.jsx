@@ -2,6 +2,8 @@ import {Container} from "./styles";
 import {ImagemTop} from "./styles";
 import {ButtonsTop} from "./styles";
 import {Topo} from "./styles";
+import {CardSection} from "./styles";
+import {Sections} from "./styles";
 import Header from './../../Components/Header/index'
 import { ButtonText } from "./../../Components/Button/ButtonText";
 import { Cardh } from "./../../Components/Card/Card";
@@ -21,17 +23,51 @@ export function Home() {
           </ImagemTop>
 
           <ButtonsTop>
-            <ButtonText title="Dia A Dia"/>
-            <ButtonText title="Vegano"/>
-            <ButtonText title="Nutrientes"/>
+            <ButtonText title="Marmita de Carne"/>
+            <ButtonText title="Marmita de Peixe"/>
+            <ButtonText title="Marmita de Frango"/>
           </ButtonsTop>
 
         </Topo>
 
+        <Sections>
+        <h3>Marmita de Carne</h3>
 
-        <div>
-          <Cardh Alimento="Morango" Tipo="Morango" Valor="R$ 50,00" />
-        </div>
+          <CardSection>
+            <Cardh Alimento="Marmita de Carne" Tipo="Morango" Valor="R$ 50,00" />
+            <Cardh Alimento="Marmita de Carne" Tipo="Morango" Valor="R$ 50,00" />
+            <Cardh Alimento="Marmita de Carne" Tipo="Morango" Valor="R$ 50,00" />
+            <Cardh Alimento="Marmita de Carne" Tipo="Morango" Valor="R$ 50,00" />
+            <Cardh Alimento="Marmita de Carne" Tipo="Morango" Valor="R$ 50,00" />
+            <Cardh Alimento="Marmita de Carne" Tipo="Morango" Valor="R$ 50,00" />
+          </CardSection>
+
+        </Sections>
+
+        <Sections>
+        <h3>Marmita de Peixe</h3>
+
+          <CardSection>
+            <Cardh Alimento="Marmita de Peixe" Tipo="Morango" Valor="R$ 50,00" />
+            <Cardh Alimento="Marmita de Peixe" Tipo="Morango" Valor="R$ 50,00" />
+            <Cardh Alimento="Marmita de Peixe" Tipo="Morango" Valor="R$ 50,00" />
+            <Cardh Alimento="Marmita de Peixe" Tipo="Morango" Valor="R$ 50,00" />
+            <Cardh Alimento="Marmita de Peixe" Tipo="Morango" Valor="R$ 50,00" />
+            <Cardh Alimento="Marmita de Peixe" Tipo="Morango" Valor="R$ 50,00" />
+            <Cardh Alimento="Marmita de Peixe" Tipo="Morango" Valor="R$ 50,00" />
+          </CardSection>
+
+        </Sections>
+
+        <Sections>
+        <h3>Marmita de Frango</h3>
+
+          <CardSection>
+            <Cardh Alimento="Marmita de Frango" Tipo="Morango" Valor="R$ 50,00" />
+
+          </CardSection>
+
+        </Sections>
 
 
       </body>

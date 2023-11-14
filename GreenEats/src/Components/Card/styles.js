@@ -20,35 +20,47 @@ export const Card = styled.div `
 
 img {
   width: 100%;
-  height: 150px;
-  padding-top: 50px;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
+  height: 180px;
+padding-top: 140px;
+  border-radius: 20px;
 }
 
 h1 {
-  padding-top : 3rem ;
   font-size: 1.2rem;
 }
 h2 {
   font-size: .9rem;
   color: #aaaa;
 }
-button {
-  background-color:#23aa49;
-  height: 45px;
-  border: none;
-  padding: 4px;
+
+
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 20px;
+  width: 100%;
+
+  button {
+  background-color: #fff;
+  height: 30px;
+  border: 2px solid #23aa49;
   width: 90%;
-  color: #fff;
+  color: #23aa49;
   font-size: 1rem;
   font-weight: bold;
-  border-radius: 4px;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
-button:hover {
-  background-color: #a4ea4f;
+  button:hover {
+  background-color: #23aa49;
+  color: #fff;
   cursor: pointer;
+  transition: 400ms;
+}
+
 }
 
 `
