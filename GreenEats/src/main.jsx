@@ -5,7 +5,6 @@ import ReactDOM from "react-dom/client";
 // import { Cadastro } from "./Pages/Cadastro/Cadastro/CadastrTipo";
 // import { CadastroLoja } from "./Pages/Cadastro/CadastroLoja/CadastroLoja";
 // import ReactDOM from 'react-dom/client'
-// import { Home } from './Pages/Home/Home'
 // import { CadastroLoja } from "./Pages/Cadastro/CadastroLoja/CadastroLoja";
 // import { EnderecoLoja } from "./Pages/Cadastro/Endereço/EnderecoLoja";
 // import { Loja } from "./Pages/Cadastro/InfoLoja/loja";
@@ -16,4 +15,3 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Entregador />
   </React.StrictMode>
-);
