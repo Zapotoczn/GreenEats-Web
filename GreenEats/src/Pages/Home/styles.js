@@ -74,3 +74,24 @@ flex-wrap: wrap;
 justify-content: flex-start;
 gap: 20px;
 `
+export const Section2 = styled.div`
+  width: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-left: 35%;
+  padding-top: 10%;
+
+ h1{
+  font-size: 32px;
+    line-height: 40px;
+    text-transform: uppercase;
+ }
+ 
+ h2{
+  font-size: 32px;
+    line-height: 40px;
+    text-transform: uppercase;
+ }
+`
