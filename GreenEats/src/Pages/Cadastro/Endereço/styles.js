@@ -28,15 +28,10 @@ export const LoginCadastro = styled.div`
 export const Inputs = styled.div`
   display: flex;
   flex-direction: column;
-  position: relative;
-  bottom: 8%;
-  padding: 5px;
-  width: 500px;
 
   .error-message {
     color: rgb(255, 72, 72);
     font-size: 0.75rem;
-    margin-top: 8px;
   }
 
   .input-error {
@@ -49,10 +44,11 @@ export const Inputs = styled.div`
 
   > label {
     font-weight: 500;
-    padding: 12px;
+    padding: 10px;
   }
 
   > input {
+    width: 500px;
     padding: 12px;
     border: none;
     border-radius: 5px;
@@ -62,55 +58,16 @@ export const Inputs = styled.div`
   }
 `;
 
-export const InputCep = styled.div`
+export const DuoInput = styled.div`
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
-  position: relative;
-  padding: 10px;
-  width: 500px;
-
-  .error-message {
-    color: rgb(255, 72, 72);
-    font-size: 0.75rem;
-    margin-top: 8px;
-  }
-
-  .input-error {
-    outline: 1px solid rgb(255, 72, 72);
-  }
-
-  .input::placeholder {
-    color: #999;
-  }
-
-  > label {
-    font-weight: 500;
-    padding: 12px;
-  }
-
-  > input {
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    outline: none;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    outline: 1px solid 444;
-  }
-`;
-
-export const InputEstado = styled.div`
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  right: 23%;
-  top: 2%;
-  padding: 10px;
+  flex-wrap: wrap;
   width: 200px;
 
   .error-message {
     color: rgb(255, 72, 72);
     font-size: 0.75rem;
-    margin-top: 8px;
   }
 
   .input-error {
@@ -123,7 +80,7 @@ export const InputEstado = styled.div`
 
   > label {
     font-weight: 500;
-    padding: 12px;
+    padding: 10px;
   }
 
   > select {
@@ -133,111 +90,6 @@ export const InputEstado = styled.div`
     outline: none;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     outline: 1px solid 444;
-  }
-`;
-
-export const InputCidade = styled.div`
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  bottom: 10vh;
-  left: 23%;
-  padding: 10px;
-  width: 200px;
-
-  .error-message {
-    color: rgb(255, 72, 72);
-    font-size: 0.75rem;
-    margin-top: 8px;
-  }
-
-  .input-error {
-    outline: 1px solid rgb(255, 72, 72);
-  }
-
-  .input::placeholder {
-    color: #999;
-  }
-
-  > label {
-    font-weight: 500;
-    padding: 12px;
-  }
-
-  > input {
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    outline: none;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    outline: 1px solid 444;
-  }
-`;
-
-export const InputNumero = styled.div`
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  right: 23%;
-  bottom: 5%;
-  padding: 10px;
-  width: 200px;
-
-  .error-message {
-    color: rgb(255, 72, 72);
-    font-size: 0.75rem;
-    margin-top: 8px;
-  }
-
-  .input-error {
-    outline: 1px solid rgb(255, 72, 72);
-  }
-
-  .input::placeholder {
-    color: #999;
-  }
-
-  > label {
-    font-weight: 500;
-    padding: 12px;
-  }
-
-  > input {
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    outline: none;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    outline: 1px solid 444;
-  }
-`;
-
-export const InputComplemento = styled.div`
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  bottom: 16vh;
-  left: 23%;
-  padding: 10px;
-  width: 200px;
-
-  .error-message {
-    color: rgb(255, 72, 72);
-    font-size: 0.75rem;
-    margin-top: 8px;
-  }
-
-  .input-error {
-    outline: 1px solid rgb(255, 72, 72);
-  }
-
-  .input::placeholder {
-    color: #999;
-  }
-
-  > label {
-    font-weight: 500;
-    padding: 12px;
   }
 
   > input {

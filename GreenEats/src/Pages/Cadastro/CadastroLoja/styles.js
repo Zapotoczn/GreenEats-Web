@@ -36,8 +36,7 @@ export const Inputs = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-  bottom: 8%;
-  padding: 5px;
+  bottom: 4%;
   width: 500px;
 
   .error-message {
