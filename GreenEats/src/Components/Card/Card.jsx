@@ -5,13 +5,14 @@ export function Cardh({Alimento, Tipo, Valor}) {
     return (
             <Card>
                 <div class="card">
-                <img src="https://t3.ftcdn.net/jpg/05/31/49/32/360_F_531493238_YOdY3Y4xLpPgHMxo3zegSxl1DgJOsr4k.jpg" alt="" />
-                <div>
-                <h1>{Alimento}</h1>
-                <h2>{Tipo}</h2>
-                <span>{Valor}</span>
-                <button>Adicionar ao carrinho</button>
-                </div>
+                    <img src="https://img.freepik.com/vetores-gratis/ilustracao-de-comida-kawaii-desenhada-a-mao_52683-84890.jpg" alt="" />
+                        <div class>
+                        <h1>{Alimento}</h1>
+                        </div>
+                        <div class="bottom">
+                                <span>{Valor}</span>
+                                <button>+</button>
+                        </div>
                 </div>
             </Card>
         );
