@@ -2,13 +2,9 @@ import { useForm } from "react-hook-form";
 import InputMask from "react-input-mask";
 import { MainCadastro } from "./styles";
 import { LoginCadastro } from "./styles";
-import { ButtonCadastro } from "../CadastroLoja/Components/Button/ButtonCadastro";
+import { ButtonCadastro } from "./../../../Components/Button/ButtonCadastro";
 import { Inputs } from "./styles";
-import { InputEstado } from "./styles";
-import { InputCidade } from "./styles";
-import { InputCep } from "./styles";
-import { InputNumero } from "./styles";
-import { InputComplemento } from "./styles";
+import { DuoInput } from "./styles";
 
 export const EnderecoLoja = () => {
   const {
@@ -26,7 +22,7 @@ export const EnderecoLoja = () => {
     <MainCadastro>
       <LoginCadastro>
         <h1>Endereço da loja</h1>
-        <InputCep>
+        <Inputs>
           <label htmlFor="cepInput">Cep</label>
           <InputMask
             className={errors?.cep && "input-error"}
@@ -45,9 +41,9 @@ export const EnderecoLoja = () => {
           {errors?.cep?.type === "validate" && (
             <p className="error-message">Cep invalido.</p>
           )}
-        </InputCep>
+        </Inputs>
 
-        <InputEstado>
+        <DuoInput>
           <label>Estado</label>
           <select
             className={errors?.estado && "input-error"}
@@ -64,9 +60,7 @@ export const EnderecoLoja = () => {
           {errors?.estado?.type === "required" && (
             <p className="error-message">O Estado é obrigatória.</p>
           )}
-        </InputEstado>
 
-        <InputCidade>
           <label>Cidade</label>
           <input
             className={errors?.cidade && "input-error"}
@@ -80,7 +74,7 @@ export const EnderecoLoja = () => {
           {errors?.cidade?.type === "required" && (
             <p className="error-message">A Cidade é obrigatória.</p>
           )}
-        </InputCidade>
+        </DuoInput>
 
         <Inputs>
           <label>Endereço</label>
@@ -95,7 +89,7 @@ export const EnderecoLoja = () => {
           )}
         </Inputs>
 
-        <InputNumero>
+        <DuoInput>
           <label>Numero</label>
           <input
             className={errors?.numero && "input-error"}
@@ -111,9 +105,7 @@ export const EnderecoLoja = () => {
               O Numero é obrigatória.
             </p>
           )}
-        </InputNumero>
 
-        <InputComplemento>
           <label>Complemento</label>
           <input
             className={errors?.complemento && "input-error"}
@@ -121,7 +113,7 @@ export const EnderecoLoja = () => {
             placeholder="Exemplo: Sala 1"
             {...register("complemento", {})}
           />
-        </InputComplemento>
+        </DuoInput>
 
         <ButtonCadastro
           onClick={() => handleSubmit(onSubmit)()}

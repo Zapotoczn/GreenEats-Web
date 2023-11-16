@@ -2,8 +2,9 @@ import { useForm } from "react-hook-form";
 import InputMask from "react-input-mask";
 import { LoginCadastro } from "./styles";
 import { MainCadastro } from "./styles";
-import { ButtonCadastro } from "./Components/Button/ButtonCadastro";
+import { ButtonCadastro } from "../../../Components/Button/ButtonCadastro";
 import { Inputs } from "./styles";
+import { SVGIcon } from "./../../../Components/Svg/SVGIcon";
 
 export const CadastroLoja = () => {
   const {
@@ -20,6 +21,7 @@ export const CadastroLoja = () => {
   return (
     <MainCadastro>
       <LoginCadastro>
+        <SVGIcon />
         <h1>Cadastre sua loja</h1>
         <p>Entre e ganhe mensalidade grátis</p>
         <Inputs>

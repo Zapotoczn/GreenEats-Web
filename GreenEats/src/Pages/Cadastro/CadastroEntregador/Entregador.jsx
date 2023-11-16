@@ -1,25 +1,43 @@
+import * as Yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import InputMask from "react-input-mask";
 import { LoginCadastro } from "./styles";
 import { MainCadastro } from "./styles";
-import { ButtonCadastro } from "./../CadastroLoja/Components/Button/ButtonCadastro";
+import { ButtonCadastro } from "./../../../Components/Button/ButtonCadastro";
 import { Inputs } from "./styles";
+import { SVGIcon } from "./../../../Components/Svg/SVGIcon";
+
+const schema = Yup.object().shape({
+  name: Yup.string().required("Campo obrigatório"),
+  email: Yup.string().email("Email invalido").required("Campo obrigatório"),
+  cpf: Yup.string().required("Cpf obrigatório"),
+  senha: Yup.string()
+    .min(6, "A senha precisa ter 6 caracteres")
+    .required("Campo obrigatória"),
+  confirmacao: Yup.string()
+    .oneOf([Yup.ref("senha"), null], "Senha diferente")
+    .required("Campo obrigatoório"),
+});
 
 export const Entregador = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm({
+    mode: "all",
+    resolver: yupResolver(schema),
+  });
 
   const onSubmit = (data) => {
     console.log(data);
-    // console.log(JSON.stringify(data));
   };
 
   return (
     <MainCadastro>
       <LoginCadastro>
+        <SVGIcon />
         <h1>Bem vindo! Entregador</h1>
         <p>Digite seus dados pessoais</p>
         <Inputs>
@@ -30,8 +48,8 @@ export const Entregador = () => {
             placeholder="Guilherme silva"
             {...register("name", { required: true })}
           />
-          {errors?.name?.type === "required" && (
-            <p className="error-message">Nome Obrigatorio.</p>
+          {errors.name && (
+            <p className="error-message">{errors.name.message}</p>
           )}
         </Inputs>
 
@@ -43,38 +61,26 @@ export const Entregador = () => {
             placeholder="email@email.com"
             {...register("email", {
               required: true,
-              // validate: (value) => isEmail(value),
             })}
           />
-          {errors?.email?.type === "required" && (
-            <p className="error-message">O e-mail é obrigatório.</p>
-          )}
-
-          {errors?.email?.type === "validate" && (
-            <p className="error-message">Email invalido.</p>
+          {errors.email && (
+            <p className="error-message">{errors.email.message}</p>
           )}
         </Inputs>
 
         <Inputs>
-          <label htmlFor="cpfInput">CPF:</label>
+          <label>CPF:</label>
           <InputMask
             className={errors?.cpf && "input-error"}
             mask="999.999.999-99"
             placeholder="000.000.000-00"
             maskChar=""
             type="text"
-            id="cpfInput"
             {...register("cpf", {
               required: true,
             })}
           />
-          {errors?.cpf?.type === "required" && (
-            <p className="error-message">Cpf obrigatório.</p>
-          )}
-
-          {errors?.cpf?.type === "validate" && (
-            <p className="error-message">Cpf invalido.</p>
-          )}
+          {errors.cpf && <p className="error-message">{errors.cpf.message}</p>}
         </Inputs>
 
         <Inputs>
@@ -87,8 +93,8 @@ export const Entregador = () => {
               required: true,
             })}
           />
-          {errors?.senha?.type === "required" && (
-            <p className="error-message">A senha é obrigatório.</p>
+          {errors.senha && (
+            <p className="error-message">{errors.senha.message}</p>
           )}
         </Inputs>
 
@@ -102,8 +108,8 @@ export const Entregador = () => {
               required: true,
             })}
           />
-          {errors?.confirmacao?.type === "required" && (
-            <p className="error-message">A senha é obrigatório.</p>
+          {errors.confirmacao && (
+            <p className="error-message">{errors.confirmacao.message}</p>
           )}
         </Inputs>
         <ButtonCadastro

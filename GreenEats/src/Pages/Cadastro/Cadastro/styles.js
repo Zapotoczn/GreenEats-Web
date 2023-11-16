@@ -37,5 +37,5 @@ export const ImgFood = styled.img`
   justify-content: center;
   align-items: center;
   position: relative;
-  top: 128px;
+  top: 95px;
 `;
