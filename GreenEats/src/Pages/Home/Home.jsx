@@ -1,13 +1,16 @@
-import {Container} from "./styles";
+import {Container, Container1, FooterCol, SocialLinks} from "./styles";
 import {ImagemTop} from "./styles";
 import {ButtonsTop} from "./styles";
 import {Topo} from "./styles";
 import {CardSection} from "./styles";
 import {Sections} from "./styles";
 import Header from './../../Components/Header/index'
+import {Footer} from "./styles";
 import { ButtonText } from "./../../Components/Button/ButtonText";
 import { Cardh } from "./../../Components/Card/Card";
-import { Section2 } from "./styles";
+import {Section2} from "./styles";
+import {Row} from "./styles";
+
 
 export function Home() {
   return (
@@ -76,15 +79,15 @@ export function Home() {
           </h1>
 
           <p>
-          Quem dispensa uma boa marmita fitness, que combina sabor e praticidade sem abrir mão de uma alimentação equilibrada? Pois é, ninguém! As marmitas prontas são cada vez mais procuradas, ainda mais as marmitas congeladas baratas, como as da Liv Up. Leia a seguir e aproveite para comprar marmitas fitness deliciosas!
+          Quem dispensa uma boa marmita fitness, que combina sabor e praticidade sem abrir mão de uma alimentação equilibrada? Pois é, ninguém! As marmitas prontas são cada vez mais procuradas, ainda mais as marmitas congeladas baratas, como as da Green Eats. Leia a seguir e aproveite para comprar marmitas fitness deliciosas!
           </p>
 
           <h2>
-          CONHEÇA AS MARMITAS FITNESS LIV UP
+          CONHEÇA AS MARMITAS FITNESS Green Eats
           </h2>
 
 
-          <p>Marmita fitness congelada não precisa ser sem graça, viu? Com a Liv Up, você tem marmita para semana toda, com variedade e muito sabor. Criamos uma linha para quem busca produtos realmente saudáveis e preparados com ingredientes selecionados por Chefs de Cozinha e Nutricionistas. </p>
+          <p>Marmita fitness congelada não precisa ser sem graça, viu? Com a Green Eats, você tem marmita para semana toda, com variedade e muito sabor. Criamos uma linha para quem busca produtos realmente saudáveis e preparados com ingredientes selecionados por Chefs de Cozinha e Nutricionistas. </p>
 
           <p>Além de qualidade, nosso cardápio está recheado de variedade: vai da combinação de frango desfiado cremoso, cenoura e brócolis ao tradicional prato brasileiro em uma versão mais equilibrada, com arroz integral, feijão carioca e carne moída, passando pelo saboroso encontro da carne moída com purê de abóbora e brócolis no vapor.</p>
 
@@ -92,7 +95,7 @@ export function Home() {
 
           <p>E, como já citamos, contamos com Nutricionistas para garantir que todas as criações da nossa cozinha sejam balanceadas. Eles participam de todas os processos: planejamento, execução e avaliação de tudo que é desenvolvido para que você tenha um cardápio rico para todos os momentos da sua rotina.</p>
 
-          <p>Ainda em dúvida sobre pedir marmita saudável? Continue a leitura e descubra ainda mais sobre o nosso cardápio e as facilidades para quem escolhe a Liv Up como parceira para um cardápio de alimentação saudável fácil, rápida e deliciosa.</p>
+          <p>Ainda em dúvida sobre pedir marmita saudável? Continue a leitura e descubra ainda mais sobre o nosso cardápio e as facilidades para quem escolhe a Green Eats como parceira para um cardápio de alimentação saudável fácil, rápida e deliciosa.</p>
           
 
           <h2>
@@ -100,7 +103,7 @@ export function Home() {
           </h2>
 
           <p>
-          <p>Já pesquisou por opções de marmita fit, mas não sentiu segurança de que receberia um produto gostoso para o seu dia a dia? É a coisa mais comum para quem está buscando dar o primeiro passo em direção a uma vida mais saudável. A notícia boa é que, na Liv Up, marmita fitness não é mais sinônimo de comida sem graça.</p>
+          <p>Já pesquisou por opções de marmita fit, mas não sentiu segurança de que receberia um produto gostoso para o seu dia a dia? É a coisa mais comum para quem está buscando dar o primeiro passo em direção a uma vida mais saudável. A notícia boa é que, na Green Eats, marmita fitness não é mais sinônimo de comida sem graça.</p>
 
           <p>Aliás, não só marmitas fit. Por aqui, com a variedade do nosso cardápio, todo mundo encontra as melhores escolhas para sua realidade. Por exemplo, se o seu objetivo é uma dieta low carb, buscando uma alimentação baseada na atenção ao consumo de carboidratos, pode optar por:</p>
           </p>
@@ -113,23 +116,23 @@ export function Home() {
           </ul>
 
           
-          <p>Apesar da variedade e do sabor garantido em todas as nossas receitas, esses não são os únicos motivos para escolher a Liv Up para facilitar a sua vida atribulada. Como já falamos, todas as receitas desenvolvidas em nossa cozinha são balanceadas. Ou seja, são receitas e combinações completas, com ingredientes naturais ideais para fornecer ao corpo os nutrientes necessários para uma boa saúde.</p>
+          <p>Apesar da variedade e do sabor garantido em todas as nossas receitas, esses não são os únicos motivos para escolher a Green Eats para facilitar a sua vida atribulada. Como já falamos, todas as receitas desenvolvidas em nossa cozinha são balanceadas. Ou seja, são receitas e combinações completas, com ingredientes naturais ideais para fornecer ao corpo os nutrientes necessários para uma boa saúde.</p>
 
-          <p>Desse modo, ao comer Liv Up, você inclui na sua rotina alimentar alternativas com o equilíbrio perfeito entre vitaminas, minerais e fibras que vão te ajudar a viver melhor, longe dos excessos que, a longo prazo, podem ser determinantes para a performance do seu corpo.</p>
+          <p>Desse modo, ao comer Green Eats, você inclui na sua rotina alimentar alternativas com o equilíbrio perfeito entre vitaminas, minerais e fibras que vão te ajudar a viver melhor, longe dos excessos que, a longo prazo, podem ser determinantes para a performance do seu corpo.</p>
 
-          <p>E como sabemos que a dinâmica para dar conta do trabalho, vida pessoal e outras atribuições não é simples, as Marmitas Liv Up foram pensadas para acompanhar os nossos clientes em todas as situações: seja em casa, na correria do home office, ou no trabalho, entre muitas reuniões e o desânimo ao pensar em encontrar um restaurante menos lotado. </p>
+          <p>E como sabemos que a dinâmica para dar conta do trabalho, vida pessoal e outras atribuições não é simples, as Marmitas Green Eats foram pensadas para acompanhar os nossos clientes em todas as situações: seja em casa, na correria do home office, ou no trabalho, entre muitas reuniões e o desânimo ao pensar em encontrar um restaurante menos lotado. </p>
 
           <p>Com uma embalagem prática, você pode carregar a marmita para onde for e acabar com a desculpa de comer mal para economizar tempo. É só guardar no freezer e esperar o horário do almoço para chamar a atenção de todo mundo com o cheiro de comida gostosa e nutritiva.</p>
 
-          <p>Tem mais, viu? Agora vamos te falar de como é fácil comprar marmita fitness na Liv Up e receber em casa. E também do preço que cabe no seu bolso - e ainda sobra espaço. </p>
+          <p>Tem mais, viu? Agora vamos te falar de como é fácil comprar marmita fitness na Green Eats e receber em casa. E também do preço que cabe no seu bolso - e ainda sobra espaço. </p>
           
 
           <h2>
-          DELIVERY DE MARMITA É LIV UP
+          DELIVERY DE MARMITA É Green Eats
           </h2>
 
           <p>
-          Uma das nossas maiores alegrias é que estamos em mais de 15 estados, entregando marmita saudável congelada para muitas pessoas que já escolheram uma vida mais saudável. Quer saber se já estamos na sua cidade? Dá uma olhadinha na lista e saiba onde já tem marmita fit congelada da Liv Up!
+          Uma das nossas maiores alegrias é que estamos em mais de 15 estados, entregando marmita saudável congelada para muitas pessoas que já escolheram uma vida mais saudável. Quer saber se já estamos na sua cidade? Dá uma olhadinha na lista e saiba onde já tem marmita fit congelada da Green Eats!
           </p>
 
           <h2>
@@ -144,13 +147,53 @@ export function Home() {
 
             <p>E até na hora de pagar, a gente quer te deixar à vontade: pode optar pelo PIX, diversas bandeiras e Vale Refeição e Vale Alimentação, além das principais bandeiras de cartões de crédito.</p>
 
-            <p>E aí, impossível resistir a tantos motivos para dar um up na sua alimentação saudável, né? As marmitas fitness Liv Up reúnem tudo que você precisa para manter uma dieta saudável, sem exageros e sem uma trabalheira na cozinha. Escolha as suas preferidas e peça agora!</p>
+            <p>E aí, impossível resistir a tantos motivos para dar um up na sua alimentação saudável, né? As marmitas fitness Green Eats reúnem tudo que você precisa para manter uma dieta saudável, sem exageros e sem uma trabalheira na cozinha. Escolha as suas preferidas e peça agora!</p>
        
         </Section2>
 
-        <footer>
-          
-        </footer>
+        <Footer>
+            <Container1>
+              <Row>
+                <FooterCol>
+                  <h4>company</h4>
+                  <ul>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">our services</a></li>
+                    <li><a href="#">privacy policy</a></li>
+                    <li><a href="#">affiliate program</a></li>
+                  </ul>
+                </FooterCol>
+                <FooterCol>
+                  <h4>get help</h4>
+                  <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">shipping</a></li>
+                    <li><a href="#">returns</a></li>
+                    <li><a href="#">order status</a></li>
+                    <li><a href="#">payment options</a></li>
+                  </ul>
+                </FooterCol>
+                <FooterCol>
+                  <h4>online shop</h4>
+                  <ul>
+                    <li><a href="#">watch</a></li>
+                    <li><a href="#">bag</a></li>
+                    <li><a href="#">shoes</a></li>
+                    <li><a href="#">dress</a></li>
+                  </ul>
+                </FooterCol>
+                <FooterCol>
+                  <h4>follow us</h4>
+                  <SocialLinks>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  </SocialLinks>
+                </FooterCol>
+              </Row>
+        </Container1>
+        </Footer>
 
       </body>
     </Container>
