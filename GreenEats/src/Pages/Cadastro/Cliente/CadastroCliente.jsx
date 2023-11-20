@@ -1,7 +1,6 @@
 import * as Yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
-import InputMask from "react-input-mask";
 import { LoginCadastro } from "./styles";
 import { MainCadastro } from "./styles";
 import { ButtonCadastro } from "./../../../Components/Button/ButtonCadastro";
@@ -11,7 +10,6 @@ import { SVGIcon } from "./../../../Components/Svg/SVGIcon";
 const schema = Yup.object().shape({
   name: Yup.string().required("Nome obrigatório"),
   email: Yup.string().email("Email invalido").required("Email obrigatório"),
-  cpf: Yup.string().required("Cpf obrigatório"),
   senha: Yup.string()
     .min(6, "A senha precisa ter 6 caracteres")
     .required("Campo obrigatória"),
@@ -20,7 +18,7 @@ const schema = Yup.object().shape({
     .required("Campo obrigatoório"),
 });
 
-export const Entregador = () => {
+export const CadastroCliente = () => {
   const {
     register,
     handleSubmit,
@@ -38,7 +36,7 @@ export const Entregador = () => {
     <MainCadastro>
       <LoginCadastro>
         <SVGIcon />
-        <h1>Bem vindo! Entregador</h1>
+        <h1>Bem vindo!</h1>
         <p>Digite seus dados pessoais</p>
         <Inputs>
           <label>Nome completo</label>
@@ -66,21 +64,6 @@ export const Entregador = () => {
           {errors.email && (
             <p className="error-message">{errors.email.message}</p>
           )}
-        </Inputs>
-
-        <Inputs>
-          <label>CPF:</label>
-          <InputMask
-            className={errors?.cpf && "input-error"}
-            mask="999.999.999-99"
-            placeholder="000.000.000-00"
-            maskChar=""
-            type="text"
-            {...register("cpf", {
-              required: true,
-            })}
-          />
-          {errors.cpf && <p className="error-message">{errors.cpf.message}</p>}
         </Inputs>
 
         <Inputs>

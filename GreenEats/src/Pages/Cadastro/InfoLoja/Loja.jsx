@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import InputMask from "react-input-mask";
 import { LoginCadastro } from "./styles";
 import { MainCadastro } from "./styles";
-import { ButtonCadastro } from "../CadastroLoja/Components/Button/ButtonCadastro";
+import { ButtonCadastro } from "../../../Components/Button/ButtonCadastro";
 import { Inputs } from "./styles";
 
 export const Loja = () => {
@@ -14,7 +14,6 @@ export const Loja = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-    // console.log(JSON.stringify(data));
   };
 
   return (
@@ -37,10 +36,6 @@ export const Loja = () => {
           />
           {errors?.cnpj?.type === "required" && (
             <p className="error-message">Cnpj obrigatório.</p>
-          )}
-
-          {errors?.cnpj?.type === "validate" && (
-            <p className="error-message">Cnpj invalido.</p>
           )}
         </Inputs>
 
