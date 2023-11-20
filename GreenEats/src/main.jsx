@@ -10,6 +10,9 @@ import { Loja } from "./Pages/Cadastro/InfoLoja/loja";
 import { Entregador } from "./Pages/Cadastro/CadastroEntregador/Entregador";
 import { CadastroCliente } from "./Pages/Cadastro/Cliente/CadastroCliente";
 import { Login } from "./Pages/Login/Login";
+import { Carrinho } from "./Pages/Carrinho/Carrinho";
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet"></link>
+
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
