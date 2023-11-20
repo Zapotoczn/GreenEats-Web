@@ -1,3 +1,5 @@
+import * as Yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import InputMask from "react-input-mask";
 import { MainCadastro } from "./styles";
@@ -6,16 +8,27 @@ import { ButtonCadastro } from "./../../../Components/Button/ButtonCadastro";
 import { Inputs } from "./styles";
 import { DuoInput } from "./styles";
 
+const schema = Yup.object().shape({
+  cep: Yup.string().required("Cep obrigatório"),
+  estado: Yup.string().required("Estado obrigatório"),
+  cidade: Yup.string().required("Cidade obrigatório"),
+  endereco: Yup.string().required("Endereço obrigatório"),
+  numero: Yup.string().required("Numero obrigatório"),
+  complemento: Yup.string(),
+});
+
 export const EnderecoLoja = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm({
+    mode: "all",
+    resolver: yupResolver(schema),
+  });
 
   const onSubmit = (data) => {
     console.log(data);
-    // console.log(JSON.stringify(data));
   };
 
   return (
@@ -35,12 +48,7 @@ export const EnderecoLoja = () => {
               required: true,
             })}
           />
-          {errors?.cep?.type === "required" && (
-            <p className="error-message">Cep Obrigatorio.</p>
-          )}
-          {errors?.cep?.type === "validate" && (
-            <p className="error-message">Cep invalido.</p>
-          )}
+          {errors.cep && <p className="error-message">{errors.cep.message}</p>}
         </Inputs>
 
         <DuoInput>
@@ -56,9 +64,8 @@ export const EnderecoLoja = () => {
             <option value="RJ">Rio de Janeiro</option>
             <option value="MG">Minas Gerais</option>
           </select>
-
-          {errors?.estado?.type === "required" && (
-            <p className="error-message">O Estado é obrigatória.</p>
+          {errors.estado && (
+            <p className="error-message">{errors.estado.message}</p>
           )}
 
           <label>Cidade</label>
@@ -68,11 +75,10 @@ export const EnderecoLoja = () => {
             placeholder="Exemplo: São paulo"
             {...register("cidade", {
               required: true,
-              // validate: (value) => isEmail(value),
             })}
           />
-          {errors?.cidade?.type === "required" && (
-            <p className="error-message">A Cidade é obrigatória.</p>
+          {errors.cidade && (
+            <p className="error-message">{errors.cidade.message}</p>
           )}
         </DuoInput>
 
@@ -84,8 +90,8 @@ export const EnderecoLoja = () => {
             type="name"
             {...register("endereco", { required: true })}
           />
-          {errors?.endereco?.type === "required" && (
-            <p className="error-message">Endereço obrigatório.</p>
+          {errors.endereco && (
+            <p className="error-message">{errors.endereco.message}</p>
           )}
         </Inputs>
 
@@ -97,13 +103,10 @@ export const EnderecoLoja = () => {
             placeholder="Exemplo: 123"
             {...register("numero", {
               required: true,
-              // validate: (value) => isEmail(value),
             })}
           />
-          {errors?.numero?.type === "required" && (
-            <p id="idNumero" className="error-message">
-              O Numero é obrigatória.
-            </p>
+          {errors.numero && (
+            <p className="error-message">{errors.numero.message}</p>
           )}
 
           <label>Complemento</label>

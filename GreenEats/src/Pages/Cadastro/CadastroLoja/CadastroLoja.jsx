@@ -1,3 +1,5 @@
+import * as Yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import InputMask from "react-input-mask";
 import { LoginCadastro } from "./styles";
@@ -6,16 +8,30 @@ import { ButtonCadastro } from "../../../Components/Button/ButtonCadastro";
 import { Inputs } from "./styles";
 import { SVGIcon } from "./../../../Components/Svg/SVGIcon";
 
+const schema = Yup.object().shape({
+  name: Yup.string().required("Nome obrigatório"),
+  email: Yup.string().email("Email invalido").required("Email obrigatório"),
+  cnpj: Yup.string().required("Cnpj obrigatório"),
+  senha: Yup.string()
+    .min(6, "A senha precisa ter 6 caracteres")
+    .required("Campo obrigatória"),
+  confirmacao: Yup.string()
+    .oneOf([Yup.ref("senha"), null], "Senha diferente")
+    .required("Campo obrigatoório"),
+});
+
 export const CadastroLoja = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm({
+    mode: "all",
+    resolver: yupResolver(schema),
+  });
 
   const onSubmit = (data) => {
     console.log(data);
-    // console.log(JSON.stringify(data));
   };
 
   return (
@@ -32,8 +48,8 @@ export const CadastroLoja = () => {
             placeholder="Guilherme silva"
             {...register("name", { required: true })}
           />
-          {errors?.name?.type === "required" && (
-            <p className="error-message">Nome Obrigatorio.</p>
+          {errors.name && (
+            <p className="error-message">{errors.name.message}</p>
           )}
         </Inputs>
 
@@ -45,15 +61,10 @@ export const CadastroLoja = () => {
             placeholder="email@email.com"
             {...register("email", {
               required: true,
-              // validate: (value) => isEmail(value),
             })}
           />
-          {errors?.email?.type === "required" && (
-            <p className="error-message">O e-mail é obrigatório.</p>
-          )}
-
-          {errors?.email?.type === "validate" && (
-            <p className="error-message">Email invalido.</p>
+          {errors.email && (
+            <p className="error-message">{errors.email.message}</p>
           )}
         </Inputs>
 
@@ -70,12 +81,8 @@ export const CadastroLoja = () => {
               required: true,
             })}
           />
-          {errors?.cnpj?.type === "required" && (
-            <p className="error-message">Cnpj obrigatório.</p>
-          )}
-
-          {errors?.cnpj?.type === "validate" && (
-            <p className="error-message">Cnpj invalido.</p>
+          {errors.cnpj && (
+            <p className="error-message">{errors.cnpj.message}</p>
           )}
         </Inputs>
 
@@ -89,8 +96,8 @@ export const CadastroLoja = () => {
               required: true,
             })}
           />
-          {errors?.senha?.type === "required" && (
-            <p className="error-message">A senha é obrigatório.</p>
+          {errors.senha && (
+            <p className="error-message">{errors.senha.message}</p>
           )}
         </Inputs>
 
@@ -104,8 +111,8 @@ export const CadastroLoja = () => {
               required: true,
             })}
           />
-          {errors?.confirmacao?.type === "required" && (
-            <p className="error-message">A senha é obrigatório.</p>
+          {errors.confirmacao && (
+            <p className="error-message">{errors.confirmacao.message}</p>
           )}
         </Inputs>
         <ButtonCadastro

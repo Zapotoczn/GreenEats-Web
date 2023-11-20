@@ -14,7 +14,6 @@ export function Login() {
 
   const onSubmit = (data) => {
     console.log(data);
-    // console.log(JSON.stringify(data));
   };
 
   return (
@@ -28,9 +27,6 @@ export function Login() {
             placeholder="E-mail"
             {...register("email", { required: true })}
           />
-          {/* {errors?.email?.type === "required" && (
-            <p className="error-message">Nome Obrigatorio.</p>
-          )} */}
         </Inputs>
 
         <Inputs>
@@ -45,13 +41,9 @@ export function Login() {
           <span>
             <a href="">Esqueceu sua senha?</a>
           </span>
-          {/* {errors?.senha?.type === "required" && (
-            <p className="error-message">A senha é obrigatório.</p>
-          )} */}
         </Inputs>
 
         <ButtonText onClick={() => handleSubmit(onSubmit)()} title="Entrar" />
-        <h3>Ou</h3>
         <ButtonText
           onClick={() => handleSubmit(onSubmit)()}
           title="Cadastre-se"
